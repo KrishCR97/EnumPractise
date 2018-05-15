@@ -5,6 +5,8 @@
  */
 package enumpractise;
 
+import java.util.Arrays;
+
 /**
  *
  * @author GameS
@@ -12,6 +14,13 @@ package enumpractise;
 public class EnumPractise {
 enum Weekends{
 SATURDAY,SUNDAY;
+String weekends;
+private Weekends(String weekend){
+this.weekends = weekend;
+}
+public String getWeekendDay(){
+return this.weekends;
+}
 }
     /**
      * @param args the command line arguments
@@ -19,7 +28,8 @@ SATURDAY,SUNDAY;
     public static void main(String[] args) {
         // TODO code application logic here
         Weekends w1 = Weekends.valueOf("SATURDAY");
-        System.out.println(w1.ordinal());
+        System.out.println(Arrays.toString(Weekends.values()));
+        
     }
     
 }
