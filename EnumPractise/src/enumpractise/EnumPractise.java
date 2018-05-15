@@ -10,12 +10,16 @@ package enumpractise;
  * @author GameS
  */
 public class EnumPractise {
-
+enum Weekends{
+SATURDAY,SUNDAY;
+}
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Weekends w1 = Weekends.valueOf("SATURDAY");
+        System.out.println(w1.ordinal());
     }
     
 }
