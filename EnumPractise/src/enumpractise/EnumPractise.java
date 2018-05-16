@@ -13,7 +13,17 @@ import java.util.Arrays;
  */
 public class EnumPractise {
 enum Weekends{
-SATURDAY,SUNDAY;
+SATURDAY(6),SUNDAY(7);
+int number;
+
+        private Weekends(int num) {
+            System.out.println("In here " + num);
+        this.number = num;
+        }
+        public int getNumber(){
+        return this.number;
+        }
+
 }
     /**
      * @param args the command line arguments
@@ -21,7 +31,7 @@ SATURDAY,SUNDAY;
     public static void main(String[] args) {
         // TODO code application logic here
         Weekends w1 = Weekends.valueOf("SATURDAY");
-        System.out.println(w1.ordinal());
+        System.out.println(w1.getNumber());
         
     }
     
