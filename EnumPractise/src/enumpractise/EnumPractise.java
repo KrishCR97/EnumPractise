@@ -14,13 +14,6 @@ import java.util.Arrays;
 public class EnumPractise {
 enum Weekends{
 SATURDAY,SUNDAY;
-String weekends;
-private Weekends(String weekend){
-this.weekends = weekend;
-}
-public String getWeekendDay(){
-return this.weekends;
-}
 }
     /**
      * @param args the command line arguments
@@ -28,7 +21,7 @@ return this.weekends;
     public static void main(String[] args) {
         // TODO code application logic here
         Weekends w1 = Weekends.valueOf("SATURDAY");
-        System.out.println(Arrays.toString(Weekends.values()));
+        System.out.println(w1.ordinal());
         
     }
     
